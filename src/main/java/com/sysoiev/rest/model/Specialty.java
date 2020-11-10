@@ -1,0 +1,76 @@
+package com.sysoiev.rest.model;
+
+import com.fasterxml.jackson.annotation.JsonAutoDetect;
+import org.hibernate.annotations.GenericGenerator;
+
+import javax.persistence.*;
+import java.util.Objects;
+
+@JsonAutoDetect
+@Entity
+@Table(name = "specialties")
+public class Specialty {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
+    @GenericGenerator(name = "native", strategy = "native")
+    @Column(name = "id")
+    private Long id;
+
+    @Column(name = "specialty")
+    private String specialty;
+    
+    public Specialty() {
+    }
+
+    public Specialty(Long id, String specialty) {
+        this.id = id;
+        this.specialty = specialty;
+    }
+
+    public Specialty(Long id) {
+        this.id = id;
+    }
+
+    public Specialty(String specialty) {
+        this.specialty = specialty;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getSpecialty() {
+        return specialty;
+    }
+
+    public void setSpecialty(String specialty) {
+        this.specialty = specialty;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Specialty specialties = (Specialty) o;
+
+        if (!Objects.equals(id, specialties.id)) return false;
+        return Objects.equals(specialty, specialties.specialty);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = id != null ? id.hashCode() : 0;
+        result = 31 * result + (specialty != null ? specialty.hashCode() : 0);
+        return result;
+    }
+
+    @Override
+    public String toString() {
+        return id + " " + specialty;
+    }
+}
