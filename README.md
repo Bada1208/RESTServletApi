@@ -21,4 +21,5 @@ Account -> AccountStatus
 Postman (https://www.getpostman.com/)
 - Репозиторий должен иметь бейдж сборки travis(https://travis-ci.com/)
 - Рабочее приложение должно быть развернуто на heroku.com
+  
 Технологии: Java, MySQL, Hibernate, REST, Servlets, Maven, Liquibase.
