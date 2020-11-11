@@ -4,4 +4,28 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
                       http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
+    <servlet>
+        <servlet-name>SpecialtyServlet</servlet-name>
+        <servlet-class>com.sysoiev.rest.controller.SpecialtyServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SpecialtyServlet</servlet-name>
+        <url-pattern>/api/v1/specialties</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>CustomerServlet</servlet-name>
+        <servlet-class>com.sysoiev.rest.controller.CustomerServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CustomerServlet</servlet-name>
+        <url-pattern>/api/v1/customers</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>AccountServlet</servlet-name>
+        <servlet-class>com.sysoiev.rest.controller.AccountServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AccountServlet</servlet-name>
+        <url-pattern>/api/v1/accounts</url-pattern>
+    </servlet-mapping>
 </web-app>

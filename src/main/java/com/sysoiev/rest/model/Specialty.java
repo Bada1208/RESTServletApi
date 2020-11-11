@@ -1,12 +1,10 @@
 package com.sysoiev.rest.model;
 
-import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 import java.util.Objects;
 
-@JsonAutoDetect
 @Entity
 @Table(name = "specialties")
 public class Specialty {
@@ -18,7 +16,7 @@ public class Specialty {
 
     @Column(name = "specialty")
     private String specialty;
-    
+
     public Specialty() {
     }
 

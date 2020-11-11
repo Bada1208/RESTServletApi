@@ -15,7 +15,7 @@ import java.io.PrintWriter;
 import java.util.List;
 
 
-@WebServlet(name = "SpecialtyServlet", urlPatterns = "/api/v1/customers")
+@WebServlet(name = "CustomerServlet", urlPatterns = "/api/v1/customers")
 public class CustomerServlet extends HttpServlet {
     private final CustomerRepository customerRepository = new HibernateCustomerRepository();
     private final Gson gson = new Gson();

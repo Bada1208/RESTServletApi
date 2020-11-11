@@ -1,11 +1,9 @@
 package com.sysoiev.rest.model;
 
-import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 
-@JsonAutoDetect
 @Entity
 @Table(name = "accounts")
 public class Account {
