@@ -1,0 +1,18 @@
+insert into specialties(specialty)
+values ('cooker'),
+       ('driver'),
+       ('coder'),
+       ('mechanic');
+insert into accounts(account_status)
+values ('ACTIVE'),
+       ('ACTIVE'),
+       ('ACTIVE');
+insert into customer_specialties(customer_id, specialty_id)
+values (1, 3),
+       (1, 2),
+       (2, 2),
+       (3, 1);
+insert into customers(name, surname, specialty_id, account_id)
+values ('Vasilij', 'Vasev', 3, 3),
+       ('Ivan', 'Ivanov', 2, 2),
+       ('Egor', 'Egorov', 1, 1);
