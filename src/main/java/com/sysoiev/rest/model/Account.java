@@ -33,6 +33,10 @@ public class Account {
         this.id = id;
     }
 
+    public Long getId() {
+        return id;
+    }
+
     public void setId(Long id) {
         this.id = id;
     }
@@ -41,13 +45,10 @@ public class Account {
         this.accountStatus = accountStatus;
     }
 
-    public Long getId() {
-        return id;
-    }
-
     public AccountStatus getAccountStatus() {
         return accountStatus;
     }
+
 
     @Override
     public String toString() {
