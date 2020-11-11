@@ -3,7 +3,7 @@ package com.sysoiev.rest.repository;
 import java.util.List;
 
 public interface GenericRepository<T, ID> {
-    void save(T data);
+    void create(T data);
 
     List<T> getAll();
 

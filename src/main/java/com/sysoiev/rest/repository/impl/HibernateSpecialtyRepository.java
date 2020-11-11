@@ -12,7 +12,7 @@ public class HibernateSpecialtyRepository implements SpecialtyRepository {
     private final SessionUtil sessionUtil = new SessionUtil();
 
     @Override
-    public void save(Specialty data) {
+    public void create(Specialty data) {
         sessionUtil.openTransactionSession();
         Session session = sessionUtil.getSession();
         session.save(data);

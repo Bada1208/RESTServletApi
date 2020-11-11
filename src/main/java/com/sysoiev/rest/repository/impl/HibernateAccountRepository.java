@@ -5,16 +5,16 @@ import com.sysoiev.rest.repository.AccountRepository;
 import com.sysoiev.rest.util.SessionUtil;
 import org.hibernate.Session;
 
-import javax.ejb.Stateless;
+
 import javax.persistence.Query;
 import java.util.List;
 
-@Stateless
+
 public class HibernateAccountRepository implements AccountRepository {
     private final SessionUtil sessionUtil = new SessionUtil();
 
     @Override
-    public void save(Account data) {
+    public void create(Account data) {
         sessionUtil.openTransactionSession();
         Session session = sessionUtil.getSession();
         session.save(data);

@@ -13,7 +13,7 @@ public class HibernateCustomerRepository implements CustomerRepository {
     private final SessionUtil sessionUtil = new SessionUtil();
 
     @Override
-    public void save(Customer data) {
+    public void create(Customer data) {
         sessionUtil.openTransactionSession();
         Session session = sessionUtil.getSession();
         session.save(data);
