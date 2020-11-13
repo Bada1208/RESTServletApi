@@ -19,6 +19,7 @@ public class AccountServlet extends HttpServlet {
     private final AccountRepository accountRepository = new HibernateAccountRepository();
     private final Gson gson = new Gson();
 
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         PrintWriter writer = resp.getWriter();
@@ -41,17 +42,20 @@ public class AccountServlet extends HttpServlet {
         writer.close();
     }
 
+
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         Account account = gson.fromJson(req.getReader(), Account.class);
         accountRepository.create(account);
     }
 
+
     @Override
     protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         Account account = gson.fromJson(req.getReader(), Account.class);
         accountRepository.update(account);
     }
+
 
     @Override
     protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
