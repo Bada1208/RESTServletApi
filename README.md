@@ -1,5 +1,6 @@
 # RESTServletApi
 
+[![Build Status](https://travis-ci.com/Bada1208/RESTServletApi.svg?branch=master)](https://travis-ci.com/Bada1208/RESTServletApi)
 
 Необходимо реализовать REST API, которое взаимодействует с БД.
 Сущности:
@@ -20,4 +21,5 @@ Account -> AccountStatus
 Postman (https://www.getpostman.com/)
 - Репозиторий должен иметь бейдж сборки travis(https://travis-ci.com/)
 - Рабочее приложение должно быть развернуто на heroku.com
+  
 Технологии: Java, MySQL, Hibernate, REST, Servlets, Maven, Liquibase.
