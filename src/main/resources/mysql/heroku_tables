@@ -1,3 +1,5 @@
+create database heroku_496c0abf0a20b0b;
+use  heroku_496c0abf0a20b0b;
 create table if not exists specialties
 (
     id        bigint primary key AUTO_INCREMENT,
