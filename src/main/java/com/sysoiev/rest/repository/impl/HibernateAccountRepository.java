@@ -25,7 +25,7 @@ public class HibernateAccountRepository implements AccountRepository {
     public List<Account> getAll() {
         sessionUtil.openTransactionSession();
         Session session = sessionUtil.getSession();
-        List<Account> accountList = session.createQuery("FROM Account ").list();
+        List accountList = session.createQuery("FROM Account ").list();
         sessionUtil.closeTransactionSession();
         return accountList;
     }

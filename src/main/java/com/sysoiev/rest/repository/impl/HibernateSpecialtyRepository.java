@@ -23,7 +23,7 @@ public class HibernateSpecialtyRepository implements SpecialtyRepository {
     public List<Specialty> getAll() {
         sessionUtil.openTransactionSession();
         Session session = sessionUtil.getSession();
-        List<Specialty> specialtyList = session.createQuery("FROM Specialty ").list();
+        List specialtyList = session.createQuery("FROM Specialty ").list();
         sessionUtil.closeTransactionSession();
         return specialtyList;
     }

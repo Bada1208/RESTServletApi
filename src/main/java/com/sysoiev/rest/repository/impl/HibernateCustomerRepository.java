@@ -24,7 +24,7 @@ public class HibernateCustomerRepository implements CustomerRepository {
     public List<Customer> getAll() {
         sessionUtil.openTransactionSession();
         Session session = sessionUtil.getSession();
-        List<Customer> customerList = session.createQuery("FROM Customer ").list();
+        List customerList = session.createQuery("FROM Customer ").list();
         sessionUtil.closeTransactionSession();
         return customerList;
     }
